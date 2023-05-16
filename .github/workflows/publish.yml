@@ -5,23 +5,22 @@ on:
     inputs:
       version:
         required: true
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
-    
+
       - uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
 
       - run: pnpm i --ignore-scripts
       - run: pnpm run lint && pnpm run build
-      - run:
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+      - run: |
+          git config user.name github-actions && git config user.email github-actions@github.com
           npm version ${{ github.event.inputs.version }}
           git push origin master
           git push origin v${{ github.event.inputs.version }}
