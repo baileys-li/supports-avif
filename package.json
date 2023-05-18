@@ -1,6 +1,6 @@
 {
 	"name": "supports-avif",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Detect support for AVIF images in the browser",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
