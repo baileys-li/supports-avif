@@ -2,15 +2,6 @@
 	"name": "supports-avif",
 	"version": "1.0.0",
 	"description": "Detect support for AVIF images in the browser",
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
-	"repository": "baileys-li/supports-avif",
-	"scripts": {
-		"build": "tsup index.ts --format cjs,esm --dts",
-		"lint": "tsc",
-		"prettier": "prettier --write ."
-	},
 	"keywords": [
 		"browser",
 		"detect",
@@ -20,19 +11,28 @@
 		"support",
 		"avif"
 	],
+	"repository": "baileys-li/supports-avif",
+	"license": "MIT",
 	"author": {
 		"name": "Arthur Baileys Li",
 		"url": "https://github.com/baileys-li"
 	},
-	"license": "MIT",
-	"volta": {
-		"node": "18.16.0"
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup index.ts --format cjs,esm --dts",
+		"lint": "tsc",
+		"prettier": "prettier --write ."
 	},
-	"packageManager": "pnpm@8.5.1",
 	"devDependencies": {
 		"@types/prettier": "^2.7.2",
-		"prettier": "2.8.7",
+		"prettier": "^2.8.8",
 		"tsup": "^6.7.0",
 		"typescript": "^5.0.4"
+	},
+	"packageManager": "pnpm@8.5.1",
+	"volta": {
+		"node": "18.16.0"
 	}
 }
